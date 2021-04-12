@@ -19,7 +19,20 @@
 
     <script>
         function formatString(str, ...values) {
-            console.log({str, values})
+            //console.log({str, values})
+
+
+            return str.reduce((acc, stub, index) => {
+                //console.log({acc, stub, index});
+                if(dict[values[index]]) {
+                    acc += `${stub}<abbr title="${dict[values[index]]}">${values[index]}</abbr>`;
+                } else {
+                    acc += `${stub}${values[index] || ""}`;
+                }
+
+               
+                return acc
+            }, '')
             
         }
         const dict = {
@@ -31,7 +44,7 @@
         const first = 'Neil';
         const last = 'Coutinho';
 
-        const bio = formatString`Hello World`;
+        const bio = formatString`Hello my name is ${first} ${last}. I specialize in ${'HTML'}, ${'CSS'} and ${'JS'}`;
         document.querySelector(".bio").innerHTML = bio;
 
     </script>

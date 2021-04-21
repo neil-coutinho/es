@@ -33,9 +33,12 @@
   const ele = document.querySelector("h2.jump");
   const content = ele.textContent;
   console.log({content});
+  //OLD
+  // const formatted = content.split('')
+  // .map(char => `<span>${char}</span>`)
 
-  const formatted = content.split('')
-  .map(char => `<span>${char}</span>`)
+  //NEW using SPREAD
+  const formatted = [...content].map(char => `<span>${char}</span>`);
 
   console.log({formatted});
 

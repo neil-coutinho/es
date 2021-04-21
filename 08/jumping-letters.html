@@ -30,9 +30,17 @@
   <h2 class="jump">SPREADS!</h2>
 
 <script>
-
-  const content = document.querySelector("h2.jump").textContent;
+  const ele = document.querySelector("h2.jump");
+  const content = ele.textContent;
   console.log({content});
+
+  const formatted = content.split('')
+  .map(char => `<span>${char}</span>`)
+
+  console.log({formatted});
+
+  ele.innerHTML = formatted.join('');
+
   
 </script>
 </body>

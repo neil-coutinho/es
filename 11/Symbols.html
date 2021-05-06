@@ -8,7 +8,24 @@
 <script>
   const wes = Symbol('Wes');
   const person = Symbol('Wes');
+    console.log({wes, person})
 
+
+    const people = {
+        [Symbol('NeilA')] : {name: "Neil A", age: 32},
+        [Symbol('NeilB')] : {name: "Neil B", age: 32},
+        [Symbol('NeilC')] : {name: "Neil C", age: 32},
+
+    }
+    console.log({people})
+
+    for (const peeps in people ){
+        console.log({peeps})
+    }
+
+    const peeps = Object.getOwnPropertySymbols(people);
+    console.log({peeps})
+    peeps.map(p => console.log(people[p]))
 </script>
 </body>
 </html>

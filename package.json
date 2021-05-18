@@ -1,0 +1,22 @@
+{
+  "name": "es",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neil-coutinho/es.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neil-coutinho/es/issues"
+  },
+  "homepage": "https://github.com/neil-coutinho/es#readme",
+  "devDependencies": {
+    "eslint": "^7.26.0"
+  }
+}
